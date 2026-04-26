@@ -161,6 +161,22 @@ git push
 | 调诚实模式 anti-pattern | `references/lint-rules.md` 类别 5 |
 | 改输出格式 | `references/lint-report-format.md` |
 
+## Roadmap
+
+```
+v0.1 (current)
+  ✅ Phase 1-4 完整 (格式 / 内容 / 跨题 / 报告)
+  ✅ 三种 mode (single / batch / evidence)
+
+v0.2 (next)
+  → evidence-mode: candidate pool < 8 时触发 ERROR (现在只是 WARN)
+    背景：跑 demo Q5 (Gartner Security) 时 grounding 候选池只有 5 个产品，
+         evidence-mode 仅 WARN，团队若 skip 直接进 wording 会硬凑；
+         应升级 ERROR，强制 wrapper 回 Phase 2 (grounding) 补候选
+  → 跨题一致性扩展：除数字外，加 framing 一致性检测
+    (如 Q5 写 "single-pane policy" 与 Q11 写 "real-time threat sharing" 能否兼容)
+```
+
 ## 配套使用
 
 ```
